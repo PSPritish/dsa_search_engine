@@ -1,0 +1,21 @@
+# --- Core Application & Web Framework ---
+streamlit
+psycopg2-binary  # For PostgreSQL connection
+python-dotenv    # For loading environment variables from .env files
+nest-asyncio     # For handling asyncio event loops in Streamlit/Jupyter
+
+# --- Machine Learning & AI ---
+langchain-google-genai # For Google Generative AI embeddings
+scikit-learn           # For TF-IDF, cosine similarity, and other ML utilities
+numpy                  # For numerical operations
+joblib                 # For saving and loading the TF-IDF vectorizer
+
+# --- Data Scraping & Preprocessing ---
+requests         # For making HTTP requests to APIs
+beautifulsoup4   # For parsing HTML
+nltk             # For natural language processing (stopwords, lemmatizer)
+
+# --- Jupyter Notebook & Utilities ---
+jupyterlab       # For running the .ipynb notebooks
+ipywidgets       # For interactive widgets in notebooks
+tqdm             # For progress bars
