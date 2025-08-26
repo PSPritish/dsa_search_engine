@@ -8,7 +8,7 @@ import time
 import dotenv
 import nest_asyncio
 import string, time
-
+import os
 dotenv.load_dotenv()
 
 # Apply at the beginning of your script
@@ -18,13 +18,8 @@ nest_asyncio.apply()
 # DB & Embeddings setup
 # --------------------------
 def get_db_connection():
-    return psycopg2.connect(
-        dbname="dsa_search",
-        user="dsa_user",
-        password="dsa_user",
-        host="localhost",
-        port="5432",
-    )
+    db_url = os.getenv("DATABASE_URL")
+    return psycopg2.connect(db_url)
 
 
 # Then you can initialize the model at module level
